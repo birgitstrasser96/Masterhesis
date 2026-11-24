@@ -1,0 +1,94 @@
+% German — standalone thesis file for beginners (Overleaf-friendly)
+% ------------------------------------------------------------------
+% Open this file in Overleaf and press Recompile. Edit the title/author
+% metadata at the top and then write your chapters below.
+% This file is intentionally standalone: it includes the preamble,
+% package settings (APA7 + biblatex), and a short example thesis body.
+% Beginners: edit only the fields marked "CHANGE ME" and the sections
+% below. Leave the package settings alone unless you know LaTeX.
+
+\def\thesislanguage{ngerman} % sets babel + biblatex language mapping
+% Use the default apa7 class (no 'man' option) so figures appear inline for students.
+% The 'man' (manuscript) option moves figures/tables to the end for journal submission.
+\documentclass{apa7}
+
+% === Metadata (CHANGE THESE) ===
+% Replace the values below with your details.
+\newcommand{\thesisauthor}{Susi Sorglos}  % Your full name (CHANGE ME)
+\newcommand{\thesistitle}{Sitzt zu Hause und föhnt ihr Haar} % (CHANGE ME)
+\newcommand{\thesissubtitle}{Schabba du und schabba da} % optional
+\newcommand{\thesisadvisor}{Prof. Dr. Harry Hirsch} % (CHANGE ME)
+\newcommand{\thesisinstitute}{Institut für Psychologie} % (CHANGE ME)
+\newcommand{\thesisdate}{21.03.1917} % (CHANGE ME)
+
+% ------------------ Preamble / Settings (begin) ------------------
+% The preamble is kept in a separate file to reduce clutter for students.
+% Do not edit `template/preamble.tex` unless you know LaTeX.
+\input{template/preamble}
+% Titelblatt ist vorgegeben; nicht im Studierendenprojekt bearbeiten.
+\input{template/titlepage_ger}
+% ------------------ Preamble / Settings (end) --------------------
+
+\begin{document}
+\maketitlepage
+
+% === Abstract ===
+\newpage
+\begin{abstract}\noindent
+Dies ist die Kurzfassung. Ersetzen Sie diesen Text durch Ihre Zusammenfassung (max. 250 Wörter).
+\vspace{2mm}
+\noindent\textbf{Keywords:} \textit{Keyword1, Keyword2}
+\vspace{5mm}
+\end{abstract}
+
+% Short English summary is kept as an example; remove if you don't need it.
+\newpage
+\section*{Short Summary (English)}
+This is an example short summary in English. Replace or delete as needed.
+
+% Acknowledgments
+\newpage
+\section*{Danksagung}
+Dank an alle, die geholfen haben.
+
+% Declaration
+\newpage
+\section*{Erklärung}
+Ich erkläre, dass diese Arbeit meine eigene ist.
+
+% Table of Contents
+\newpage
+		\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+% --- Example chapters (replace with your content) ---
+\newpage
+\section{Einleitung}
+Der erste Satz soll eine Arbeit zitieren \parencite{Fink2021}. Wenn die Autor:innen Teil des Satzes sind, verwenden Sie \textcite{Fink2021}.
+\lipsum[1-4]
+
+% Optional: Ein eigener Literaturüberblick ist nach APA nicht zwingend; Sie können ihn in die Einleitung integrieren.
+\section{Hintergrund (optional)}
+\lipsum[5-8]
+
+\section{Methode}
+\lipsum[9-12]
+
+\section{Ergebnisse}
+\lipsum[13-16]
+
+\section{Diskussion}
+\lipsum[17-20]
+
+% References
+\newpage
+\printbibliography
+
+% Appendices
+\appendix
+\section{Anhang}
+\lipsum[21-23]
+
+\end{document}
